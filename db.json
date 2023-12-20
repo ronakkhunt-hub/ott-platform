@@ -1,0 +1,346 @@
+{
+  "posters": [
+    {
+      "poster": "https://flixtv.volkovdesign.com/main/img/home/1.jpg",
+      "name": "Money Plane",
+      "category": "Action",
+      "year": "2021",
+      "plan": "Free",
+      "rating": "9.1",
+      "watchListed": true
+    },
+    {
+      "poster": "https://flixtv.volkovdesign.com/main/img/home/2.jpg",
+      "name": "The Art of Political",
+      "category": "Documentary",
+      "year": "2019",
+      "plan": "Free",
+      "rating": "8.3",
+      "watchListed": false
+    },
+    {
+      "poster": "https://flixtv.volkovdesign.com/main/img/home/3.jpg",
+      "name": "Antebellum",
+      "category": "Horror",
+      "year": "2021",
+      "plan": "Free",
+      "rating": "7.9",
+      "watchListed": false
+    },
+    {
+      "poster": "https://flixtv.volkovdesign.com/main/img/home/4.jpg",
+      "name": "Kids Next Door",
+      "category": "Documentary",
+      "year": "2017",
+      "plan": "Free",
+      "rating": "8.4",
+      "watchListed": true
+    },
+    {
+      "poster": "https://flixtv.volkovdesign.com/main/img/home/5.jpg",
+      "name": "The Empty Man",
+      "category": "Horror",
+      "year": "2020",
+      "plan": "Free",
+      "rating": "8.4",
+      "watchListed": false
+    },
+    {
+      "poster": "https://flixtv.volkovdesign.com/main/img/home/6.jpg",
+      "name": "Junglelnd",
+      "category": "Documentary",
+      "year": "2020",
+      "plan": "Free",
+      "rating": "9.1",
+      "watchListed": false
+    },
+    {
+      "poster": "https://flixtv.volkovdesign.com/main/img/home/7.jpg",
+      "name": "Bad Impulse",
+      "category": "History",
+      "year": "2017",
+      "plan": "Free",
+      "rating": "8.3",
+      "watchListed": true
+    },
+    {
+      "poster": "https://flixtv.volkovdesign.com/main/img/home/8.jpg",
+      "name": "Tenet",
+      "category": "Action",
+      "year": "2021",
+      "plan": "Free",
+      "rating": "7.9",
+      "watchListed": false
+    }
+  ],
+  "subscriptions": [
+    {
+      "name": "Sports broadcasts",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/11.png",
+      "total": 300,
+      "watchListed": false
+    },
+    {
+      "name": "Psychological films",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/15.png",
+      "total": 200,
+      "watchListed": false
+    },
+    {
+      "name": "Films about space",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/3.png",
+      "total": 100,
+      "watchListed": false
+    },
+    {
+      "name": "Romantic movies",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/1.png",
+      "total": 300,
+      "watchListed": false
+    },
+    {
+      "name": "Movies about the middle",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/18.png",
+      "total": 300,
+      "watchListed": false
+    },
+    {
+      "name": "Fairy tales",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/2.png",
+      "total": 100,
+      "watchListed": false
+    },
+    {
+      "name": "Best Movies",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/17.png",
+      "total": 300,
+      "watchListed": false
+    },
+    {
+      "name": "The best melodramas",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/13.png",
+      "total": 400,
+      "watchListed": false
+    },
+    {
+      "name": "Horror movies",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/10.png",
+      "total": 500,
+      "watchListed": false
+    },
+    {
+      "name": "Russian TV Shows",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/9.png",
+      "total": 300,
+      "watchListed": false
+    },
+    {
+      "name": "Army films",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/14.png",
+      "total": 250,
+      "watchListed": false
+    },
+    {
+      "name": "Cities of the world",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/12.png",
+      "total": 500,
+      "watchListed": false
+    }
+  ],
+  "trendingMovies": [
+    {
+      "name": "What Was Ben Affleck Planning for His\n Unmade 'Batman' Film?",
+      "poster": "https://flixtv.volkovdesign.com/main/img/interview/1.jpg",
+      "duration": "5:33"
+    },
+    {
+      "name": "A Guide to the Work of Ryan Murphy",
+      "poster": "https://flixtv.volkovdesign.com/main/img/interview/2.jpg",
+      "duration": "2:41"
+    },
+    {
+      "name": "Gugu Mbatha-Raw Shares the Films That Give Her Hope",
+      "poster": "https://flixtv.volkovdesign.com/main/img/interview/3.jpg",
+      "duration": "7:19"
+    },
+    {
+      "name": "Best of 2020: Top Trending Moments",
+      "poster": "https://flixtv.volkovdesign.com/main/img/interview/4.jpg",
+      "duration": "4:58"
+    },
+    {
+      "name": "How Movies and TV Shaped Our Perception of HIV/AIDS",
+      "poster": "https://flixtv.volkovdesign.com/main/img/interview/5.jpg",
+      "duration": "3:52"
+    },
+    {
+      "name": "American Gods",
+      "poster": "https://flixtv.volkovdesign.com/main/img/interview/6.jpg",
+      "duration": "3:52"
+    }
+  ],
+  "movies": [
+    {
+      "name": "The Good Lord Bird",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/1.png",
+      "plan": "Free",
+      "category": "Action",
+      "year": "2019",
+      "watchListed": false,
+      "rating": "8.3"
+    },
+    {
+      "name": "The Dictator",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/2.png",
+      "plan": "Free",
+      "category": "Comedy",
+      "year": "2012",
+      "watchListed": false,
+      "rating": "8.1"
+    },
+    {
+      "name": "12 Years a Slave",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/3.png",
+      "plan": "Free",
+      "category": "History",
+      "year": "2013",
+      "watchListed": true,
+      "rating": "7.9"
+    },
+    {
+      "name": "Get On Up",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/4.png",
+      "plan": "Free",
+      "category": "Biography",
+      "year": "2014",
+      "watchListed": false,
+      "rating": "8.8"
+    },
+    {
+      "name": "Interview With the Vamp",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/5.png",
+      "plan": "Free",
+      "category": "Horror",
+      "year": "1994",
+      "watchListed": false,
+      "rating": "7.1"
+    },
+    {
+      "name": "Pawn Sacrifice",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/6.png",
+      "plan": "Free",
+      "category": "History",
+      "year": "2015",
+      "watchListed": false,
+      "rating": "8.6"
+    },
+    {
+      "name": "Operation Finale",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/7.png",
+      "plan": "Free",
+      "category": "Drama",
+      "year": "2018",
+      "watchListed": false,
+      "rating": "7.0"
+    },
+    {
+      "name": "Denial",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/8.png",
+      "plan": "Free",
+      "category": "Drama",
+      "year": "2016",
+      "watchListed": false,
+      "rating": "7.5"
+    },
+    {
+      "name": "Luce",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/9.png",
+      "plan": "Free",
+      "category": "Drama",
+      "year": "2019",
+      "watchListed": true,
+      "rating": "7.2"
+    },
+    {
+      "name": "Fighting with My Family",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/10.png",
+      "plan": "Free",
+      "category": "Biography",
+      "year": "2013",
+      "watchListed": false,
+      "rating": "8.9"
+    },
+    {
+      "name": "Footloose",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/11.png",
+      "plan": "Free",
+      "category": "Drama",
+      "year": "2017",
+      "watchListed": true,
+      "rating": "7.2"
+    },
+    {
+      "name": "Swimming for Gold",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/12.png",
+      "plan": "Free",
+      "category": "Drama",
+      "year": "2020",
+      "watchListed": true,
+      "rating": "7.6"
+    },
+    {
+      "name": "Infamous",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/13.png",
+      "plan": "Free",
+      "category": "Thriller",
+      "year": "2020",
+      "watchListed": true,
+      "rating": "7.1"
+    },
+    {
+      "name": "Above the Shadows",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/14.png",
+      "plan": "Free",
+      "category": "Science Fiction",
+      "year": "2019",
+      "watchListed": true,
+      "rating": "7.2"
+    },
+    {
+      "name": "After Darkness",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/15.png",
+      "plan": "Free",
+      "category": "Science Fiction",
+      "year": "2018",
+      "watchListed": true,
+      "rating": "9.1"
+    },
+    {
+      "name": "I Still See You",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/16.png",
+      "plan": "Free",
+      "category": "Horror",
+      "year": "2018",
+      "watchListed": false,
+      "rating": "9.0"
+    },
+    {
+      "name": "The Midnight Man",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/17.png",
+      "plan": "Free",
+      "category": "Thriller",
+      "year": "2018",
+      "watchListed": true,
+      "rating": "8.5"
+    },
+    {
+      "name": "The Dustwalker",
+      "poster": "https://flixtv.volkovdesign.com/main/img/card/18.png",
+      "plan": "Free",
+      "category": "Thriller",
+      "year": "2019",
+      "watchListed": true,
+      "rating": "9.3"
+    }
+  ]
+}
