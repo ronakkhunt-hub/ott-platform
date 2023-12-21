@@ -144,4 +144,5 @@ export const plans = [
 export const classNames = {
   container:
     "xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm mx-5 sm:mx-auto",
+  customContainer: "xl:max-w-3xl lg:max-w-2xl md:max-w-xl sm:max-w-lg ml-20"
 };

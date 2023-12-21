@@ -342,5 +342,10 @@
       "watchListed": true,
       "rating": "9.3"
     }
+  ],
+  "series": [
+    {
+      "name": "Fast and Furious"
+    }
   ]
 }
