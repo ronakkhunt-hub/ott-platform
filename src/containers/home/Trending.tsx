@@ -1,23 +1,20 @@
 import React, { useRef } from "react";
-import Carousel from "react-multi-carousel";
-import {
-  ArrowLongLeftIcon,
-  ArrowLongRightIcon,
-} from "@heroicons/react/24/outline";
+import ReactOwlCarousel from "react-owl-carousel";
 
-import MultiCarousel, {
+import MultiCarousel from "../../components/carousel/Carousel";
+import {
+  CustomArrows,
+  TrendingItem,
   TrendingItemProps,
-} from "../../components/carousel/Carousel";
-import TrendingItem from "../../components/carousel/TrendingItem";
-import { carouselConfig, classNames } from "../../utils/common";
-import CustomArrows from "../../components/carousel/CustomArrows";
+} from "../../components/carousel";
+import { classNames } from "../../utils/common";
 
 interface Props {
   items: TrendingItemProps[];
 }
 
 const Trending: React.FC<Props> = ({ items }) => {
-  const sliderRef = useRef<Carousel>(null);
+  const carouselRef = useRef<ReactOwlCarousel>(null);
 
   return (
     <div className="relative mt-20">
@@ -36,17 +33,26 @@ const Trending: React.FC<Props> = ({ items }) => {
       </div>
       <div className="relative mx-5">
         <MultiCarousel
-          ref={sliderRef}
-          Component={TrendingItem}
+          ref={carouselRef}
           className="max-w-7xl mx-auto mt-8"
+          Component={TrendingItem}
+          defaultItems={3}
           items={items}
-          customArrow={true}
-          partialVisible={true}
-          config={carouselConfig()}
+          config={{
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          }}
         />
         <CustomArrows
-          previous={() => sliderRef.current?.previous(3)}
-          next={() => sliderRef.current?.next(3)}
+          previous={() => carouselRef.current?.to(1, 500)}
+          next={() => carouselRef.current?.to(3, 500)}
         />
       </div>
     </div>

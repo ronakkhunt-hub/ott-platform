@@ -65,16 +65,19 @@ export const carouselConfig = (desktop = 3, tablet = 2, mobile = 1) => ({
     breakpoint: { max: 3000, min: 1024 },
     items: desktop,
     slidesToSlide: desktop,
+    paritialVisibilityGutter: 60
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: tablet,
     slidesToSlide: tablet,
+    paritialVisibilityGutter: 50
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: mobile,
     slidesToSlide: mobile,
+    paritialVisibilityGutter: 30
   },
 });
 
@@ -144,5 +147,5 @@ export const plans = [
 export const classNames = {
   container:
     "xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm mx-5 sm:mx-auto",
-  customContainer: "xl:max-w-3xl lg:max-w-2xl md:max-w-xl sm:max-w-lg ml-20"
+  customContainer: "mx-auto w-full lg:w-3/4 xl:w-3/5 px-4 sm:px-6 lg:px-8"
 };

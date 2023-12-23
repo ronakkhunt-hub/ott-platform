@@ -5,14 +5,13 @@ import axios from "axios";
 import Header from "../../components/Header";
 import FilterSection from "../../components/FilterSection";
 import MultiCarousel from "../../components/carousel/Carousel";
-import PosterItem from "../../components/carousel/PosterItem";
+import { PosterItem } from "../../components/carousel";
 import Footer from "../../components/Footer";
 import Movies from "./Movies";
 import Subscriptions from "./Subscriptions";
 import Pricing from "./Pricing";
 import Trending from "./Trending";
 import data from "../../db.json";
-import { carouselConfig } from "../../utils/common";
 
 const Home: React.FC = () => {
   // const { data: posterData } = useQuery({
@@ -40,10 +39,22 @@ const Home: React.FC = () => {
     <div>
       <Header />
       <MultiCarousel
-        className="mx-5"
         Component={PosterItem}
+        center
+        margin={40}
+        defaultItems={4}
         items={data.posters ?? []}
-        config={carouselConfig()}
+        config={{
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 4,
+          },
+        }}
       />
       <FilterSection />
       <Movies movies={data.movies ?? []} />

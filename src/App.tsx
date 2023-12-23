@@ -1,12 +1,12 @@
 import "./App.css";
 import Home from "./containers/home";
-import Player from "./containers/player";
+import Media from "./containers/media";
 
 function App() {
   return (
     <div className="bg-[#131720]">
       {/* <Home /> */}
-      <Player />
+      <Media />
     </div>
   );
 }

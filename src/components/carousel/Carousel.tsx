@@ -1,16 +1,16 @@
 import { ElementType, ForwardRefRenderFunction, forwardRef } from "react";
-import Carousel, { ResponsiveType } from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-
-import { getDeviceType } from "../../utils/common";
+import ReactOwlCarousel, { Options } from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 
 interface Props {
   Component: ElementType;
   className?: string;
+  center?: boolean;
+  margin?: number;
   items: PosterItemProps[] | SubscriptionItemProps[] | TrendingItemProps[];
-  partialVisible?: boolean;
-  config: ResponsiveType;
-  customArrow?: boolean;
+  defaultItems: number;
+  config?: { [key: string]: Options };
 }
 
 export interface PosterItemProps {
@@ -36,29 +36,38 @@ export interface TrendingItemProps {
   duration: string;
 }
 
-const MultiCarousel: ForwardRefRenderFunction<Carousel, Props> = (
-  { Component, className, items, partialVisible, config, customArrow },
+const MultiCarousel: ForwardRefRenderFunction<ReactOwlCarousel, Props> = (
+  { Component, className, center, margin, items, defaultItems, config },
   ref
 ) => {
-  const deviceType = getDeviceType();
-
   return (
-    <Carousel
+    <ReactOwlCarousel
       ref={ref}
       className={className}
-      swipeable={false}
-      responsive={config}
-      infinite={true}
-      partialVisible={partialVisible}
-      arrows={!customArrow}
-      autoPlay={deviceType !== "desktop"}
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-      deviceType={deviceType}
+      loop
+      center={center ? center : false}
+      margin={margin ? margin : 10}
+      items={defaultItems}
+      dots={false}
+      nav
+      responsive={
+        config ?? {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 6,
+          },
+        }
+      }
     >
       {items.map((item, index: number) => (
         <Component key={index} index={index} item={item} />
       ))}
-    </Carousel>
+    </ReactOwlCarousel>
   );
 };
 

@@ -1,23 +1,17 @@
 import React, { useRef } from "react";
-import Carousel from "react-multi-carousel";
-import {
-  ArrowLongLeftIcon,
-  ArrowLongRightIcon,
-} from "@heroicons/react/24/outline";
 
 import MultiCarousel, {
   SubscriptionItemProps,
 } from "../../components/carousel/Carousel";
-import SubscriptionItem from "../../components/carousel/SubscriptionItem";
-import { carouselConfig } from "../../utils/common";
-import CustomArrows from "../../components/carousel/CustomArrows";
+import ReactOwlCarousel from "react-owl-carousel";
+import { CustomArrows, SubscriptionItem } from "../../components/carousel";
 
 interface Props {
   items: SubscriptionItemProps[];
 }
 
 const Subscriptions: React.FC<Props> = ({ items }) => {
-  const sliderRef = useRef<Carousel>(null);
+  const sliderRef = useRef<ReactOwlCarousel>(null);
 
   return (
     <div className="pt-20 mx-5 sm:mx-5">
@@ -26,17 +20,15 @@ const Subscriptions: React.FC<Props> = ({ items }) => {
       </div>
       <div className="relative">
         <MultiCarousel
+          className="max-w-7xl mx-auto"
           ref={sliderRef}
           Component={SubscriptionItem}
-          className="max-w-7xl mx-auto"
           items={items}
-          customArrow={true}
-          partialVisible={true}
-          config={carouselConfig(6, 4, 2)}
+          defaultItems={6}
         />
         <CustomArrows
-          previous={() => sliderRef.current?.previous(6)}
-          next={() => sliderRef.current?.next(6)}
+          previous={() => sliderRef.current?.to(1, 500)}
+          next={() => sliderRef.current?.to(6, 500)}
         />
       </div>
     </div>

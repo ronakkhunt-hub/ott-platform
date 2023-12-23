@@ -1,13 +1,12 @@
 import React from "react";
 import { BookOpenIcon, StarIcon } from "@heroicons/react/24/outline";
-
 import { PosterItemProps } from "./Carousel";
 
 interface Props {
   item: PosterItemProps;
 }
 
-const PosterItem: React.FC<Props> = ({ item }) => {
+export const PosterItem: React.FC<Props> = ({ item }) => {
   const { name, poster, plan, category, year, watchListed, rating } = item;
 
   return (
@@ -48,5 +47,3 @@ const PosterItem: React.FC<Props> = ({ item }) => {
     </div>
   );
 };
-
-export default PosterItem;

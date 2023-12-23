@@ -19,43 +19,10 @@ const CustomDropdown: React.FC<Props> = ({
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const optionsListRef = useRef<HTMLDivElement>(null);
 
-  // const filterDropdown = (value: string) => {
-  //   setHighlightedIndex(-1);
-  // };
-
   const handleOptionClick = (option: string) => {
     toggleDropdown();
     setHighlightedIndex(-1);
   };
-
-  // const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-  //   if (event.key === "Enter") {
-  //     toggleDropdown();
-  //     setHighlightedIndex(-1);
-  //   } else if (event.key === "ArrowDown") {
-  //     event.preventDefault();
-  //     setHighlightedIndex((prevIndex) =>
-  //       prevIndex === items.length - 1 ? prevIndex : prevIndex + 1
-  //     );
-  //     if (optionsListRef.current) {
-  //       const selectedOptionElement =
-  //         optionsListRef.current.children[highlightedIndex + 1];
-  //       if (selectedOptionElement) {
-  //         selectedOptionElement.scrollIntoView({ block: "nearest" });
-  //       }
-  //     }
-  //   } else if (event.key === "ArrowUp") {
-  //     event.preventDefault();
-  //     setHighlightedIndex((prevIndex) => (prevIndex <= 0 ? 0 : prevIndex - 1));
-  //     if (optionsListRef.current && highlightedIndex >= 0) {
-  //       const selectedOptionElement =
-  //         optionsListRef.current.children[highlightedIndex - 1];
-  //       if (selectedOptionElement) {
-  //         selectedOptionElement.scrollIntoView({ block: "nearest" });
-  //       }
-  //     }
-  //   }
-  // };
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {

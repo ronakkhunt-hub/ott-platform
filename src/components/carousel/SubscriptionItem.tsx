@@ -8,10 +8,8 @@ interface Props {
   item: SubscriptionItemProps;
 }
 
-const SubscriptionItem: React.FC<Props> = ({ index, item }) => {
+export const SubscriptionItem: React.FC<Props> = ({ index, item }) => {
   const { name, poster, total, watchListed } = item;
-
-  console.log("index % 2 === 0", index, index % 2 === 0);
 
   return (
     <div
@@ -49,5 +47,3 @@ const SubscriptionItem: React.FC<Props> = ({ index, item }) => {
     </div>
   );
 };
-
-export default SubscriptionItem;

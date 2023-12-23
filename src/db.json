@@ -345,7 +345,40 @@
   ],
   "series": [
     {
-      "name": "Fast and Furious"
+      "name": "Fast and Furious",
+      "bgPoster": "https://flixtv.volkovdesign.com/main/img/details.jpg",
+      "seasons": [
+        {
+          "name": "Fast and Furious - Season 1",
+          "episodes": [
+            {
+              "name": "Doms' fight with Rock",
+              "poster": "https://flixtv.volkovdesign.com/main/img/series/1.jpg",
+              "duration": "56:01"
+            },
+            {
+              "name": "Car race",
+              "poster": "https://flixtv.volkovdesign.com/main/img/series/2.jpg",
+              "duration": "55:01"
+            },
+            {
+              "name": "Brothers",
+              "poster": "https://flixtv.volkovdesign.com/main/img/series/3.jpg",
+              "duration": "50:01"
+            },
+            {
+              "name": "Meaning of true love",
+              "poster": "https://flixtv.volkovdesign.com/main/img/series/4.jpg",
+              "duration": "52:30"
+            },
+            {
+              "name": "Riza found her brother",
+              "poster": "https://flixtv.volkovdesign.com/main/img/series/5.jpg",
+              "duration": "50:30"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
