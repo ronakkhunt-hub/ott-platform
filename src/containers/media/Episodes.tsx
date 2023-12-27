@@ -8,9 +8,8 @@ import {
   TrendingItem,
   CustomArrows,
 } from "../../components/carousel";
-import { classNames } from "../../utils/common";
-import Genres from "./EpisodeDetail";
 import EpisodeDetail from "./EpisodeDetail";
+import { classNames } from "../../utils/common";
 
 interface Props {
   items: TrendingItemProps[];

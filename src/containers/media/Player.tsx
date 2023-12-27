@@ -20,8 +20,8 @@ const Player: React.FC = () => {
             "url(https://flixtv.volkovdesign.com/main/img/details.jpg) center top / cover no-repeat",
         }}
       ></div>
-      <div className={`${classNames.customContainer} lg:mx-20`}>
-        <div className={`relative pt-20 z-10`}>
+      <div className={classNames.container}>
+        <div className={`relative  w-3/5 pt-20 z-10`}>
           <div className="group mb-10 cursor-pointer w-max flex gap-3 items-center transition duration-600">
             <PlayCircleIcon
               className="w-14 h-14 stroke-white group-hover:stroke-sky-600 transition duration-600"

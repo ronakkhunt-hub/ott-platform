@@ -21,6 +21,7 @@ const Footer: React.FC = () => {
                   className="w-8 h-8"
                   src="https://imgs.search.brave.com/jgZp2Mw8CFV0-c7Swzb3i0jLRRXfHjBLtwRAWFGAfTE/rs:fit:560:320:1/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9iL2I5LzIw/MjNfRmFjZWJvb2tf/aWNvbi5zdmcvNTEy/cHgtMjAyM19GYWNl/Ym9va19pY29uLnN2/Zy5wbmc"
                   alt=""
+                  loading="lazy"
                 />
               </li>
               <li>
