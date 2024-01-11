@@ -1,19 +1,19 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 interface Props {
   genres: string[];
   shares: string[];
 }
 
-const EpisodeDetail: React.FC<Props> = ({ genres, shares }) => {
+export const EpisodeDetail: React.FC<Props> = ({ genres, shares }) => {
   return (
-    <Fragment>
+    <div className="mt-10">
       <div className="text-lg text-white mt-3 mb-3">Genres</div>
       <div className="flex gap-2">
         {genres.map((item) => (
           <a
             href="#"
-            className="py-1 px-4 bg-[#151f30ff] text-white rounded-2xl hover:bg-sky-600 transition duration-700"
+            className="py-1 px-4 bg-[#151f30ff] text-white rounded-2xl hover:bg-blue-500 transition duration-700"
           >
             {item}
           </a>
@@ -43,8 +43,6 @@ const EpisodeDetail: React.FC<Props> = ({ genres, shares }) => {
           )
         )}
       </div>
-    </Fragment>
+    </div>
   );
 };
-
-export default EpisodeDetail;

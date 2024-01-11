@@ -1,16 +1,16 @@
 import React from "react";
 import Plyr from "plyr-react";
 import "plyr-react/plyr.css";
-import {
-  ArrowDownTrayIcon,
-  PlayCircleIcon,
-  StarIcon,
-} from "@heroicons/react/24/outline";
 
 import { classNames } from "../../utils/common";
-import { BookOpenIcon } from "@heroicons/react/20/solid";
+import {
+  BookmarkBorder,
+  CloudDownloadOutlined,
+  PlayCircle,
+  StarPurple500,
+} from "@mui/icons-material";
 
-const Player: React.FC = () => {
+export const Player: React.FC = () => {
   return (
     <div className="relative pt-24">
       <div
@@ -21,31 +21,31 @@ const Player: React.FC = () => {
         }}
       ></div>
       <div className={classNames.container}>
-        <div className={`relative  w-3/5 pt-20 z-10`}>
-          <div className="group mb-10 cursor-pointer w-max flex gap-3 items-center transition duration-600">
-            <PlayCircleIcon
-              className="w-14 h-14 stroke-white group-hover:stroke-sky-600 transition duration-600"
+        <div className={`relative w-full lg:w-3/5 pt-20 z-10`}>
+          <div className="group mb-10 cursor-pointer w-max flex gap-3 items-center transition duration-500">
+            <PlayCircle
+              className="w-14 h-14 stroke-white fill-transparent group-hover:stroke-blue-500 transition duration-500"
               strokeWidth={0.8}
             />
-            <h2 className="text-lg text-white group-hover:text-sky-600 transition duration-600">
+            <h2 className="text-lg text-white group-hover:text-blue-500 transition duration-500">
               Trailer
             </h2>
           </div>
           <h1 className="text-4xl text-white font-[Rubik]">
             The Fast and the Furious
           </h1>
-          <div className="flex gap-4 items-center mt-5 text-white">
+          <div className="flex flex-wrap gap-4 items-center mt-5 text-white">
             <div className="flex gap-2 items-center">
-              <StarIcon className="w-4 h-4 stroke-sky-600" />
+              <StarPurple500 className="w-4 h-4 fill-blue-500" />
               9.7
             </div>
-            <div className="w-1 h-1 bg-sky-600 rounded-full" />
+            <div className="w-1 h-1 bg-blue-500 rounded-full" />
             Action
-            <div className="w-1 h-1 bg-sky-600 rounded-full" />
+            <div className="w-1 h-1 bg-blue-500 rounded-full" />
             2021
-            <div className="w-1 h-1 bg-sky-600 rounded-full" />
+            <div className="w-1 h-1 bg-blue-500 rounded-full" />
             1 h 42 min
-            <div className="w-1 h-1 bg-sky-600 rounded-full" />
+            <div className="w-1 h-1 bg-blue-500 rounded-full" />
             16+
           </div>
           <p className="text-white text-base font-normal leading-7 mt-10">
@@ -64,41 +64,44 @@ const Player: React.FC = () => {
             />
           </div>
           <div className="flex gap-2 flex-col sm:flex-row items-start sm:items-center justify-between mt-4">
-            <div className="flex gap-2 items-center text-white">
-              <ArrowDownTrayIcon className="w-6 h-6 stroke-sky-600" />
+            <div className="flex gap-2 flex-wrap items-center text-sm sm:text-lg text-white">
+              <CloudDownloadOutlined
+                className="h-4 w-4 sm:w-6 sm:h-6 fill-blue-500"
+                strokeWidth={2}
+              />
               Download:
               <div className="flex gap-1 items-center">
                 <a
-                  className="px-2 transition duration-900 hover:text-sky-600"
+                  className="px-2 transition duration-900 hover:text-blue-500"
                   href="480p"
                 >
                   480p
                 </a>
-                <div className="h-3 w-1 border-l-2 border-sky-900" />
+                <div className="h-3 w-1 border-l-2 border-blue-900" />
                 <a
-                  className="px-2 transition duration-900 hover:text-sky-600"
+                  className="px-2 transition duration-900 hover:text-blue-500"
                   href="720p"
                 >
                   720p
                 </a>
-                <div className="h-3 w-1 border-l-2 border-sky-900" />
+                <div className="h-3 w-1 border-l-2 border-blue-900" />
                 <a
-                  className="px-2 transition duration-900 hover:text-sky-600"
+                  className="px-2 transition duration-900 hover:text-blue-500"
                   href="1080p"
                 >
                   1080p
                 </a>
-                <div className="h-3 w-1 border-l-2 border-sky-900" />
+                <div className="h-3 w-1 border-l-2 border-blue-900" />
                 <a
-                  className="px-2 transition duration-900 hover:text-sky-600"
+                  className="px-2 transition duration-900 hover:text-blue-500"
                   href="4k"
                 >
                   4k
                 </a>
               </div>
             </div>
-            <div className="flex gap-2 items-center cursor-pointer group">
-              <BookOpenIcon className="w-5 h-5 stroke-sky-600 group-hover:stroke-yellow-600" />
+            <div className="flex gap-2 items-center text-sm sm:text-lg cursor-pointer">
+              <BookmarkBorder className="h-4 w-4 sm:w-6 sm:h-6 fill-blue-500" />
               <div className="text-md text-white">Add to favourite</div>
             </div>
           </div>
@@ -107,5 +110,3 @@ const Player: React.FC = () => {
     </div>
   );
 };
-
-export default Player;

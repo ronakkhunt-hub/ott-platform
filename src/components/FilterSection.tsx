@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-import CustomDropdown from "./CustomDropdown";
+import { CustomDropdown } from "./CustomDropdown";
 import { classNames, genreList, yearList } from "../utils/common";
 
 const dropdownData = [
@@ -28,10 +28,10 @@ interface MenuItemProps {
   onClick: (menuName: string) => void;
 }
 
-const FilterSection: React.FC = () => {
+export const FilterSection: React.FC = () => {
   const [activeMenu, setActiveMenu] = useState("Featured");
   const [indicatorStyle, setIndicatorStyle] = useState<React.CSSProperties>({
-    width: "94px",
+    width: "99px",
     transform: "translateX(8px)",
   });
   const [dropdowns, setDropdowns] = useState<DropdownItem[]>(dropdownData);
@@ -58,8 +58,8 @@ const FilterSection: React.FC = () => {
   };
 
   return (
-    <div className={classNames.container}>
-      <div className="flex justify-between flex-col gap-5 md:flex-row bg-[#151f30ff] mt-20 p-6 py-5 rounded-2xl">
+    <div className={`${classNames.container}`}>
+      <div className="flex justify-between flex-col gap-5 md:flex-row bg-[#151f30ff] mt-10 p-6 py-5 rounded-2xl">
         <div className="flex gap-3">
           {dropdowns.map((item, index: number) => (
             <CustomDropdown
@@ -88,7 +88,7 @@ const FilterSection: React.FC = () => {
               onClick={handleMenuClick}
             />
             <div
-              className="absolute left-0 top-2 bg-[#151f30ff] h-8 rounded-lg transition-transform duration-300 z-0"
+              className="absolute left-0 top-2 bg-[#151f30ff] h-7 rounded-lg transition-transform duration-300 z-0"
               style={indicatorStyle}
             />
           </div>
@@ -98,16 +98,14 @@ const FilterSection: React.FC = () => {
   );
 };
 
-export default FilterSection;
-
 const MenuItem = ({ menuName, isActive, onClick }: MenuItemProps) => {
   return (
     <>
       <button
         id={menuName}
         className={`z-10 ${
-          isActive ? "text-sky-500" : "text-white"
-        } px-3 md:px-4 pt-0.5 pb-1 rounded-lg transition duration-300`}
+          isActive ? "text-blue-500" : "text-white"
+        } px-3 md:px-4 pt-0.5 rounded-lg transition duration-300`}
         onClick={() => onClick(menuName)}
       >
         {menuName}

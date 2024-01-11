@@ -1,8 +1,5 @@
-import {
-  ArrowLongLeftIcon,
-  ArrowLongRightIcon,
-} from "@heroicons/react/24/outline";
 import React, { MouseEventHandler } from "react";
+import { EastRounded, WestRounded } from "@mui/icons-material";
 
 interface Props {
   previous: MouseEventHandler<HTMLDivElement>;
@@ -11,19 +8,19 @@ interface Props {
 
 export const CustomArrows: React.FC<Props> = ({ previous, next }) => {
   return (
-    <>
+    <div className="flex gap-2 items-center">
       <div
-        className="hidden md:flex absolute flex justify-center items-center px-3.5 py-3.5 rounded-full top-2/4 -translate-y-full left-8 bg-[#151f30ff] transition duration-700 hover:bg-sky-600 cursor-pointer"
+        className="mr-2 flex justify-center items-center h-12 w-12 rounded-full bg-[#151f30ff] transition duration-700 hover:bg-blue-500 cursor-pointer"
         onClick={previous}
       >
-        <ArrowLongLeftIcon className={`w-5 h-5 stroke-white`} />
+        <WestRounded className={`w-6 h-6 fill-white`} />
       </div>
       <div
-        className="hidden md:flex absolute flex justify-center items-center px-3.5 py-3.5 rounded-full top-2/4 -translate-y-full right-8 bg-[#151f30ff] transition duration-700 hover:bg-sky-600 cursor-pointer"
+        className="ml-2 flex justify-center items-center h-12 w-12 rounded-full bg-[#151f30ff] transition duration-700 hover:bg-blue-500 cursor-pointer"
         onClick={next}
       >
-        <ArrowLongRightIcon className={`w-5 h-5 stroke-white`} />
+        <EastRounded className={`w-6 h-6 fill-white`} />
       </div>
-    </>
+    </div>
   );
 };

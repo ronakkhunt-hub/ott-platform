@@ -1,12 +1,12 @@
+import { ArrowLeft, ArrowRight } from "@mui/icons-material";
 import React, { useState } from "react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 
 interface Props {
   totalPages: number;
   onPageChange: (page: number) => void;
 }
 
-const Pagination = ({ totalPages, onPageChange }: Props) => {
+export const Pagination = ({ totalPages, onPageChange }: Props) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const handlePageChange = (page: number) => {
@@ -33,7 +33,7 @@ const Pagination = ({ totalPages, onPageChange }: Props) => {
       pageNumbers.push(
         <div
           className={`flex justify-center items-center w-8 h-8 rounded-full cursor-pointer text-sm bg-[#141821ff] ${
-            currentPage === 1 ? "text-blue-600" : ""
+            currentPage === 1 ? "text-blue-500" : ""
           }`}
           onClick={() => handlePageChange(1)}
         >
@@ -47,7 +47,7 @@ const Pagination = ({ totalPages, onPageChange }: Props) => {
       pageNumbers.push(
         <div
           className={`flex justify-center items-center w-8 h-8 rounded-full cursor-pointer text-sm bg-[#141821ff] ${
-            i === currentPage ? "text-blue-600" : ""
+            i === currentPage ? "text-blue-500" : ""
           }`}
           onClick={() => handlePageChange(i)}
         >
@@ -64,7 +64,7 @@ const Pagination = ({ totalPages, onPageChange }: Props) => {
       pageNumbers.push(
         <div
           className={`flex justify-center items-center w-8 h-8 rounded-full cursor-pointer text-sm bg-[#141821ff] ${
-            currentPage === totalPages ? "text-blue-600" : ""
+            currentPage === totalPages ? "text-blue-500" : ""
           }`}
           onClick={() => handlePageChange(totalPages)}
         >
@@ -91,20 +91,18 @@ const Pagination = ({ totalPages, onPageChange }: Props) => {
   return (
     <div className="flex gap-2">
       <div
-        className={`flex justify-center items-center w-8 h-8 rounded-full cursor-pointer text-sm bg-[#141821ff] text-blue-600`}
+        className={`flex justify-center items-center w-8 h-8 rounded-full cursor-pointer text-sm bg-[#141821ff] text-blue-500`}
         onClick={handlePrevPage}
       >
-        <ArrowLeftIcon className="w-4" />
+        <ArrowLeft className="w-4" />
       </div>
       {renderPageNumbers()}
       <div
-        className={`flex justify-center items-center w-8 h-8 rounded-full cursor-pointer text-sm bg-[#141821ff] text-blue-600`}
+        className={`flex justify-center items-center w-8 h-8 rounded-full cursor-pointer text-sm bg-[#141821ff] text-blue-500`}
         onClick={handleNextPage}
       >
-        <ArrowRightIcon className="w-4" />
+        <ArrowRight className="w-4" />
       </div>
     </div>
   );
 };
-
-export default Pagination;

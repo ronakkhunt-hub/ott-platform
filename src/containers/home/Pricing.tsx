@@ -1,12 +1,12 @@
 import React from "react";
-import { CheckIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import { classNames, plans } from "../../utils/common";
+import { Check, Close } from "@mui/icons-material";
 
-const Pricing: React.FC = () => {
+export const Pricing: React.FC = () => {
   return (
     <div className="relative --gradient">
-      <div className={`${classNames.container} relative mt-20 pb-20 z-10`}>
+      <div className={`${classNames.container} relative mt-5 pb-20 z-10`}>
         <h1 className="text-4xl text-white mb-4">Select Your Plan</h1>
         <div className="text-lg text-white">
           No hidden fees, equipment rentals, or installation appointments.
@@ -38,9 +38,9 @@ const Pricing: React.FC = () => {
                     className="flex gap-2 items-center mb-2 text-base"
                   >
                     {feature.available ? (
-                      <CheckIcon className="w-4 h-4" stroke="#29b474" />
+                      <Check className="w-4 h-4 fill-[#29b474]" />
                     ) : (
-                      <XMarkIcon className="w-4 h-4" stroke="red" />
+                      <Close className="w-4 h-4 fill-[#ff0000ff]" />
                     )}
                     {feature.title}
                   </li>
@@ -71,5 +71,3 @@ const Pricing: React.FC = () => {
     </div>
   );
 };
-
-export default Pricing;

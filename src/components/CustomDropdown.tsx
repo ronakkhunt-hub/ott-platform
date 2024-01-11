@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 import { DropdownItem } from "./FilterSection";
+import { KeyboardArrowDown } from "@mui/icons-material";
 
 interface Props {
   index: number;
@@ -9,7 +9,7 @@ interface Props {
   toggleDropdown: (index?: number) => void;
 }
 
-const CustomDropdown: React.FC<Props> = ({
+export const CustomDropdown: React.FC<Props> = ({
   index,
   dropdownItem,
   toggleDropdown,
@@ -44,11 +44,11 @@ const CustomDropdown: React.FC<Props> = ({
         className={`group transition duration-900 flex gap-2 items-center cursor-pointer text-white`}
       >
         <span
-          className={`group-hover:text-sky-500 transition duration-900 -mt-1`}
+          className={`group-hover:text-blue-500 transition duration-900 -mt-1`}
         >
           {title}
         </span>
-        <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400 scale-75" />
+        <KeyboardArrowDown className="h-5 w-5 flex-none text-gray-400 scale-75" />
       </div>
       {isOpen && (
         <div
@@ -71,5 +71,3 @@ const CustomDropdown: React.FC<Props> = ({
     </div>
   );
 };
-
-export default CustomDropdown;

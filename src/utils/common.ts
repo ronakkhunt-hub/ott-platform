@@ -1,3 +1,13 @@
+import {
+  Folder,
+  Home,
+  PeopleAlt,
+  Window,
+  Comment,
+  Reviews,
+  KeyboardBackspace,
+} from "@mui/icons-material";
+
 export const getDeviceType = () => {
   const ua = navigator.userAgent;
   if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
@@ -65,19 +75,19 @@ export const carouselConfig = (desktop = 3, tablet = 2, mobile = 1) => ({
     breakpoint: { max: 3000, min: 1024 },
     items: desktop,
     slidesToSlide: desktop,
-    paritialVisibilityGutter: 60
+    paritialVisibilityGutter: 60,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: tablet,
     slidesToSlide: tablet,
-    paritialVisibilityGutter: 50
+    paritialVisibilityGutter: 50,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: mobile,
     slidesToSlide: mobile,
-    paritialVisibilityGutter: 30
+    paritialVisibilityGutter: 30,
   },
 });
 
@@ -87,7 +97,7 @@ export const plans = [
     price: "$11.99",
     features: [
       {
-        title: "VueTV Originals",
+        title: "ProTV Originals",
         available: true,
       },
       { title: "Switch plans or cancel anytime", available: true },
@@ -107,7 +117,7 @@ export const plans = [
     price: "$34.99",
     features: [
       {
-        title: "VueTV Originals",
+        title: "ProTV Originals",
         available: true,
       },
       { title: "Switch plans or cancel anytime", available: true },
@@ -127,7 +137,7 @@ export const plans = [
     price: "$49.99",
     features: [
       {
-        title: "VueTV Originals",
+        title: "ProTV Originals",
         available: true,
       },
       { title: "Switch plans or cancel anytime", available: true },
@@ -145,7 +155,53 @@ export const plans = [
 ];
 
 export const classNames = {
-  container:
-    "xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md sm:max-w-screen-sm mx-5 sm:mx-auto",
-  customContainer: "mx-auto w-full lg:w-3/4 xl:w-3/5 px-4 sm:px-6 lg:px-8"
+  // container: "mx-auto lg:max-w-7xl max-w-8xl px-4 sm:px-6 lg:px-8 py-8",
+  container: "mx-auto w-full lg:w-11/12 xl:w-10/12 px-4 sm:px-6 lg:px-8 py-8",
+  customContainer: "mx-auto w-full lg:w-3/4 xl:w-3/5 px-4 sm:px-6 lg:px-8",
 };
+
+export const scrollTo = (element: string) => {
+  const ele = document.getElementById(element) as HTMLAnchorElement;
+  if (ele) {
+    ele.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+};
+
+export const colors = {
+  bg: (custom?: boolean) => ({
+    darkBlue: custom ? "#131720" : "bg-[#131720]",
+    lightBlue: "bg-[#151f30ff]",
+    blue500: "bg-blue-500",
+  }),
+  divider: (custom?: boolean) => ({
+    lightBlue: custom ? "#2f80ed1a" : "border-[#2f80ed1a]",
+    darkBlue: "border-[#151f3033]",
+  }),
+  text: {
+    white: "text-white",
+    blue600: "text-blue-500",
+  },
+};
+
+export const sideBarMenu = [
+  { title: "Home", icon: Home },
+  { title: "Catalog", icon: Window },
+  {
+    title: "Pages",
+    icon: Folder,
+    nestedMenu: [
+      { title: "Add item" },
+      { title: "Edit user" },
+      { title: "Sign In" },
+      { title: "Sign Up" },
+      { title: "Forgot password" },
+      { title: "404 page" },
+    ],
+  },
+  { title: "Users", icon: PeopleAlt },
+  { title: "Comments", icon: Comment },
+  { title: "Reviews", icon: Reviews },
+  { title: "Back to ProTV", icon: KeyboardBackspace },
+];

@@ -380,5 +380,154 @@
         }
       ]
     }
+  ],
+  "comments": [
+    {
+      "id": "#comment1",
+      "user": {
+        "name": "Brian Cranston",
+        "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+      },
+      "createdAt": "30.08.2021, 17:53",
+      "message": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+      "likes": 100,
+      "dislikes": 5,
+      "replies": [
+        {
+          "id": "#reply1",
+          "createdAt": "24.08.2021, 16:41",
+          "message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "likes": 50,
+          "dislikes": 10,
+          "sender": {
+            "name": "Jesse Plemons",
+            "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+          },
+          "receiver": {
+            "name": "Brian Cranston",
+            "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+          }
+        },
+        {
+          "id": "#reply2",
+          "createdAt": "30.08.2021, 17:53",
+          "message": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "likes": 8,
+          "dislikes": 10,
+          "repliedTo": "#reply1",
+          "sender": {
+            "name": "Matt Jones",
+            "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+          },
+          "receiver": {
+            "name": "Jesse Plemons",
+            "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+          }
+        },
+        {
+          "id": "#reply3",
+          "createdAt": "30.08.2021, 17:53",
+          "message": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "likes": 8,
+          "dislikes": 10,
+          "sender": {
+            "name": "Milan patel",
+            "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+          },
+          "receiver": {
+            "name": "Brian Cranston",
+            "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+          }
+        },
+        {
+          "id": "#reply4",
+          "createdAt": "30.08.2021, 17:53",
+          "message": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "likes": 8,
+          "dislikes": 10,
+          "repliedTo": "#reply1",
+          "sender": {
+            "name": "Ronak patel",
+            "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+          },
+          "receiver": {
+            "name": "Jesse Plemons",
+            "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#comment2",
+      "user": {
+        "name": "Tess Harper",
+        "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+      },
+      "createdAt": "07.08.2021, 14:33",
+      "message": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+      "likes": 60,
+      "dislikes": 50,
+      "replies": [
+        {
+          "id": "#reply1",
+          "createdAt": "24.08.2021, 16:41",
+          "message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+          "likes": 50,
+          "dislikes": 10,
+          "sender": {
+            "name": "Jesse Plemons",
+            "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+          },
+          "receiver": {
+            "name": "Tess Harper",
+            "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "#comment3",
+      "user": {
+        "name": "Jonathan Banks",
+        "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+      },
+      "createdAt": "02.08.2021, 15:24",
+      "message": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "likes": 50,
+      "dislikes": 50,
+      "replies": []
+    }
+  ],
+  "reviews": [
+    {
+      "user": {
+        "name": "Jonathan Banks",
+        "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+      },
+      "createdAt": "24.08.2021, 17:53",
+      "message": "Best Marvel movie in my opinion",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+      "rating": 10
+    },
+    {
+      "user": {
+        "name": "Jesse Plemons",
+        "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+      },
+      "createdAt": "24.08.2021, 17:53",
+      "message": "Best Marvel movie in my opinion",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+      "rating": 8
+    },
+    {
+      "user": {
+        "name": "Charles Baker",
+        "profile": "https://flixtv.volkovdesign.com/main/img/avatar.svg"
+      },
+      "createdAt": "24.08.2021, 17:53",
+      "message": "Best Marvel movie in my opinion",
+      "description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.",
+      "rating": 9
+    }
   ]
 }

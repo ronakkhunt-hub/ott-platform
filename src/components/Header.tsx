@@ -1,50 +1,39 @@
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { colors } from "../utils/common";
+import { Close, KeyboardArrowDown, Menu } from "@mui/icons-material";
+import { Logo } from "./Logo";
+import { Link } from "react-router-dom";
 
 const products = [
   {
     name: "Analytics",
     description: "Get a better understanding of your traffic",
     href: "#",
-    icon: ChartPieIcon,
   },
   {
     name: "Engagement",
     description: "Speak directly to your customers",
     href: "#",
-    icon: CursorArrowRaysIcon,
   },
   {
     name: "Security",
     description: "Your customers’ data will be safe and secure",
     href: "#",
-    icon: FingerPrintIcon,
   },
   {
     name: "Integrations",
     description: "Connect with third-party tools",
     href: "#",
-    icon: SquaresPlusIcon,
   },
   {
     name: "Automations",
     description: "Build strategic funnels that will convert",
     href: "#",
-    icon: ArrowPathIcon,
   },
 ];
 
-export default function Header() {
+export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -54,12 +43,7 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
-            <div className="text-white text-3xl font-bold uppercase">
-              Vue
-              <span className="text-sm text-sky-600 font-bold ml-1">TV</span>
-            </div>
-          </a>
+          <Logo />
         </div>
         <div className="flex lg:hidden">
           <button
@@ -68,14 +52,14 @@ export default function Header() {
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Bars3Icon stroke="#ffffff" className="h-6 w-6" />
+            <Menu className="h-6 w-6 fill-white" />
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
               Product
-              <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" />
+              <KeyboardArrowDown className="h-5 w-5 flex-none text-gray-400" />
             </Popover.Button>
 
             <Transition
@@ -121,9 +105,12 @@ export default function Header() {
           </a>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          <Link
+            to="/login"
+            className="text-sm font-semibold leading-6 text-white"
+          >
             Log in <span>&rarr;</span>
-          </a>
+          </Link>
         </div>
       </nav>
       <Dialog
@@ -133,13 +120,17 @@ export default function Header() {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#131720] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel
+          className={`fixed inset-y-0 right-0 z-10 w-full overflow-y-auto ${
+            colors.bg().darkBlue
+          } px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10`}
+        >
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <div className="text-white text-3xl font-bold uppercase">
-                Vue
-                <span className="text-sm text-sky-600 font-bold ml-1">TV</span>
+                Pro
+                <span className="text-sm text-blue-500 font-bold ml-1">TV</span>
               </div>
             </a>
             <button
@@ -148,7 +139,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon stroke="#ffffff" className="h-6 w-6" />
+              <Close className="h-6 w-6 fill-white" />
             </button>
           </div>
           <div className="mt-6 flow-root">
@@ -157,9 +148,13 @@ export default function Header() {
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:text-[#131720] hover:bg-gray-50">
+                      <Disclosure.Button
+                        className={`flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 ${
+                          colors.text.white
+                        } hover:${colors.bg().blue500}`}
+                      >
                         Product
-                        <ChevronDownIcon
+                        <KeyboardArrowDown
                           className={`
                             ${open ? "rotate-180" : ""},
                             h-5 w-5 flex-none
@@ -172,7 +167,9 @@ export default function Header() {
                             key={item.name}
                             as="a"
                             href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-gray-50"
+                            className={`block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 ${
+                              colors.text.white
+                            } hover:${colors.bg().blue500}`}
                           >
                             {item.name}
                           </Disclosure.Button>
@@ -183,30 +180,38 @@ export default function Header() {
                 </Disclosure>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-[#131720] hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 ${
+                    colors.text.white
+                  } hover:${colors.bg().blue500}`}
                 >
                   Features
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-[#131720] hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 ${
+                    colors.text.white
+                  } hover:${colors.bg().blue500}`}
                 >
                   Marketplace
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:text-[#131720] hover:bg-gray-50"
+                  className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 ${
+                    colors.text.white
+                  } hover:${colors.bg().blue500}`}
                 >
                   Company
                 </a>
               </div>
               <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:text-[#131720] hover:bg-gray-50"
+                <Link
+                  to="/login"
+                  className={`-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 ${
+                    colors.text.white
+                  } hover:${colors.bg().blue500}`}
                 >
                   Log in
-                </a>
+                </Link>
               </div>
             </div>
           </div>
